@@ -1,0 +1,81 @@
+var x = document.forms["myForm"]["fname"].value;
+  document.getElementById("demo").innerHTML=x;
+
+  var y = document.forms["myForm"]["passw"].value;
+
+  document.getElementById("demo").innerHTML=y;
+
+  // var m = document.forms["myForm"]["emailn"].value;
+
+  // document.getElementById("demo").innerHTML=m;
+
+  // var h = document.forms["myForm"]["phonen"].value;
+
+  // document.getElementById("demo").innerHTML=h;
+    
+  if (x == "") { 
+  //alert("not right");
+  document.forms["myForm"]["fname"].placeholder="enter valid name";
+     document.getElementById("fname").style.border="2px solid Red";
+     passwor_valid();
+     // email_address();
+     // phone_no();
+     return false;
+                             
+  }
+
+ function passwor_valid()
+ {
+ 	 if (y == ""|| y <=0 ) { 
+  //alert("not right");
+     document.forms["myForm"]["passw"].placeholder="enter valid password";
+     document.getElementById("passw").style.border="2px solid Red";
+     return false;
+                             }
+ //  
+ //  function email_address()
+ // {
+ // 	 if (m == ""|| m <=0 ) { 
+ //  //alert("not right");
+ //     document.forms["myForm"]["emailn"].placeholder="enter valid email";
+ //     document.getElementById("emailn").style.border="2px solid Red";
+ //     return false;
+                             
+ //  }
+ //  function phone_no()
+ // {
+ // 	 if (h == ""|| h <=0  ) { 
+ //  //alert("not right");
+ //     document.forms["myForm"]["phonen"].placeholder="enter valid phone number";
+ //     document.getElementById("phonen").style.border="2px solid Red";
+ //     return false;
+                             
+ //  }
+ // }
+
+
+
+
+}
+</script>
+</head>
+<body>
+<p id="demo"></p>
+<form name="myForm" onsubmit=" return validateForm()" method="post">
+  Name: <input type="text" name="fname" id="fname" placeholder="name">
+  
+
+  password: 
+    <input type="password" name="pwd" id="passw" placeholder="password"><br>
+
+  <!--   Email :
+     <input type="text" name="email" id="emailn" placeholder="email"><br>
+
+     Phone :
+       <input type="text" name="phone" id="phonen" placeholder="phone"><br> -->
+   <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
